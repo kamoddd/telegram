@@ -43,9 +43,31 @@ source .venv/bin/activate
 python bot.py
 ```
 
+## 3a) Run With Docker Compose
+This setup uses a single service:
+- `bot` - the Telegram bot itself
+
+Run:
+```bash
+cd LeaderIceBot
+docker compose up --build -d
+```
+
+Stop:
+```bash
+cd LeaderIceBot
+docker compose down
+```
+
+Logs:
+```bash
+cd LeaderIceBot
+docker compose logs -f bot
+```
+
 ## 4) Usage
 - Send `/start` to subscribe the chat to updates.
-- Press `Schedule` to receive the current 2 images.
+- Press `Расписание Льда`, `Хоккей`, or `Фигурное катание` to receive the current image(s).
 - Send `/stop` to unsubscribe from notifications.
 
 ## How It Works
